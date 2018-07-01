@@ -16,4 +16,5 @@ public class App
     	Book book=(Book) XmlObjectUtil.toObject(Book.class, this.getClass().getResource("Book.xml").getFile());
     	System.out.println(1);
     }
+    
 }
