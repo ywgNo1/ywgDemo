@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Book>
+	<id>1</id>
+	<name>123</name>
+	<short1>123</short1>
+	<flag>false</flag>
+	<long1>12</long1>
+	<double1>1.56</double1>
+	<int1>123</int1>
+</Book>
