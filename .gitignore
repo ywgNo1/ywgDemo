@@ -9,6 +9,7 @@ Thumbs.db
 *.keep.*
 *.unloaded
 *.class
+*.properties
 
 .bundledata.*
 .lazy.*
