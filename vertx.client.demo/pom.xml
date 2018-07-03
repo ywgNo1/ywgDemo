@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>vertx.demo</groupId>
-  <artifactId>vertx.demo</artifactId>
+  <artifactId>vertx.client.demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>vertx.demo</name>
+  <name>vertx.client.demo</name>
   <url>http://maven.apache.org</url>
 
   <properties>
