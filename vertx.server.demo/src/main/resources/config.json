@@ -1,0 +1,17 @@
+{
+	"webServer":{
+		"port":8080
+	},
+	"redis":{
+		"host":"172.20.4.193",
+		"port":6379,
+		"auth":"gateway2018",
+		"select":5
+	},
+	"jdbc":{
+		"url":"jdbc:mysql://172.20.13.98:3306/ywg2",
+		"driver_class":"com.mysql.jdbc.Driver",
+		"user":"cesb",
+		"password":"cesb2017"
+	}
+}
