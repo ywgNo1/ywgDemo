@@ -2,6 +2,8 @@ package vertx.server.demo;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Handler;
+import io.vertx.core.eventbus.EventBus;
+import io.vertx.core.eventbus.Message;
 import io.vertx.core.http.HttpServer;
 import io.vertx.core.http.HttpServerRequest;
 import io.vertx.core.shareddata.LocalMap;
@@ -52,14 +54,14 @@ public class VertxHttpVerticle extends AbstractVerticle{
 		});
 	    server.listen(8082);
 
-//    	EventBus eb = vertx.eventBus();
-//    	eb.consumer("http1", new Handler<Message<EntityReturn>>() {
-//			@Override
-//			public void handle(Message<EntityReturn> event) {
-//				System.out.println("I have received a message: " + (event.body().toString()));
-//				event.reply(event.body());
-//			}
-//		});
+    	EventBus eb = vertx.eventBus();
+    	eb.consumer("http1", new Handler<Message<EntityReturn>>() {
+			@Override
+			public void handle(Message<EntityReturn> event) {
+				System.out.println("I have received a message: " + (event.body().toString()));
+				event.reply(event.body());
+			}
+		});
     }  
 	
 }

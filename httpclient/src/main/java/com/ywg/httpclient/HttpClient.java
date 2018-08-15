@@ -63,10 +63,11 @@ public class HttpClient {
 	}
 	@Test
 	public void get() {
+		
 		CloseableHttpClient httpClient=HttpClients.custom()
-				.setConnectionManager(connectPool)
-				.setDefaultRequestConfig(requestConfig)
-				.build();
+								.setConnectionManager(connectPool)
+								.setDefaultRequestConfig(requestConfig)
+								.build();
 		System.out.println(connectPool.getTotalStats());
 		URI uri=null;
 		try {
@@ -81,6 +82,7 @@ public class HttpClient {
 		try {
 			long time=System.currentTimeMillis();
 			response =httpClient.execute(get);
+			response.getStatusLine().getReasonPhrase();
 			System.out.println(System.currentTimeMillis()-time);
 			if (response.getStatusLine().getStatusCode()==HttpStatus.SC_OK) {
 //				HttpEntity entity=response.getEntity();
@@ -93,4 +95,6 @@ public class HttpClient {
 			e.printStackTrace();
 		}
 	}
+	
+	
 }

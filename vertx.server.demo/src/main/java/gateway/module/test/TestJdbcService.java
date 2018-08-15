@@ -17,4 +17,9 @@ public class TestJdbcService extends JdbcService{
 		String key=routingContext.request().getParam("key");
 		getCon().con();
 	}
+	
+	public void get1(RoutingContext routingContext){
+		String key=routingContext.request().getParam("key");
+		getCon().con1();
+	}
 }

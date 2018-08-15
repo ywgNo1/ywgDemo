@@ -12,6 +12,8 @@ public class TestJdbcVerticle extends ServiceVerticleImpl {
 	  @Override
 	  public void start(Future<Void> startFuture) throws Exception {
 		super.start(startFuture);
+		getRouter().route("/test").handler(getService()::get);
+		getRouter().route("/test1").handler(getService()::get1);
 	  }
 	
 	@Override

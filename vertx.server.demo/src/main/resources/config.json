@@ -9,9 +9,9 @@
 		"select":5
 	},
 	"jdbc":{
-		"url":"jdbc:mysql://172.20.13.98:3306/ywg2",
+		"url":"jdbc:mysql://localhost:3306/esb",
 		"driver_class":"com.mysql.jdbc.Driver",
-		"user":"cesb",
-		"password":"cesb2017"
+		"user":"root",
+		"password":"mysql123"
 	}
 }

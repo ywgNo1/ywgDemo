@@ -6,7 +6,7 @@ public class GateWayConstants {
 	
 	//配置文件
 	public static final String BASE_PATH="";
-	public static final String CONFIG_PATH=BASE_PATH+"src/main/config";
+	public static final String CONFIG_PATH=BASE_PATH+"src/main/resources";
 	public static final String CONFIG_NAME="config.json";
 	
 	public static final String CONFIG_FILE=CONFIG_PATH+File.separator+CONFIG_NAME;

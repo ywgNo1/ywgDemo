@@ -3,8 +3,10 @@ package gateway.module.httpserver;
 import gateway.common.verticle.BaseVerticleImpl;
 import io.vertx.core.Context;
 import io.vertx.core.Future;
+import io.vertx.core.Handler;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServer;
+import io.vertx.core.http.HttpServerRequest;
 
 public class WebServerVerticle extends BaseVerticleImpl{
 	private int port;
@@ -21,8 +23,17 @@ public class WebServerVerticle extends BaseVerticleImpl{
 		HttpServer server=vertx.createHttpServer();
 		initRouter();
 		server.requestHandler(getRouter()::accept);
+		server.requestHandler(new Handler<HttpServerRequest>() {
+			
+			@Override
+			public void handle(HttpServerRequest event) {
+				getRouter().accept(event);
+				
+			}
+		});
 		server.listen(port);
 		super.start(startFuture);
+		
 	  }
 	  
 	  public void initRouter(){

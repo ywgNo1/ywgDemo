@@ -36,6 +36,6 @@ public class VertxServerStart{
     
     public void deployVerticle(){
     	vertx.deployVerticle(new TestModuleVerticle());
-    	//vertx.deployVerticle(new TestJdbcVerticle());
+    	vertx.deployVerticle(new TestJdbcVerticle());
     }
 }
