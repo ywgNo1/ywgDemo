@@ -1,0 +1,16 @@
+#.project
+.idea
+Thumbs.db
+#.classpath
+**/.settings/**
+**/target/**
+**/.vertx/**
+*.keep
+*.keep.*
+*.unloaded
+*.class
+*.properties
+
+.bundledata.*
+.lazy.*
+.manager/
